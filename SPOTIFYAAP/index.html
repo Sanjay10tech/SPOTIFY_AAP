@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify-Web Player: Music for Everyone</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@300&family=Poppins:ital,wght@0,300;0,400;1,300&display=swap"
+      rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div id="gsap">
+        <img src="assets/logo.png" alt="" class="gsap-img" />
+
+        <h1 class="spot">S</h1>
+        <h1 class="spot">p</h1>
+        <h1 class="spot">o</h1>
+        <h1 class="spot">t</h1>
+        <h1 class="spot">i</h1>
+        <h1 class="spot">f</h1>
+        <h1 class="spot">y</h1>
+      </div>
+      <div class="my-info info-visible">
+        <div class="overlay-blur info-visible"></div>
+        <div class="my-info-box">
+          <img src="assets/me1.jpg" alt="" />
+        </div>
+        <div class="sanjay">
+          <h2>Personal Info</h2>
+          <div class="sanjay-box">
+            <h3>Name:-</h3>
+            <input type="text" placeholder="Sanjay Kumar Shukla" disabled />
+            <br />
+            <h3>Email:-</h3>
+            <input type="text" placeholder="sanjay2003shukla@gmail.com" disabled />
+            <br />
+            <h3>Password:-</h3>
+            <input type="text" placeholder="*********" disabled />
+            <br />
+            <button class="logout">Log-out</button>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar">
+        <div class="close-sidebar">
+          <img src="assets/backward_icon.png" alt="" />
+        </div>
+        <div class="side-top">
+          <span class="side-top-home">
+            <i class="fa-solid fa-house"></i> Home
+          </span>
+          <span class="side-top-home Search-side">
+            <i class="fa-solid fa-magnifying-glass"></i>Search
+          </span>
+        </div>
+        <div class="side-bottom">
+          <div class="side-bottom-top">
+            <span class="sbt" style="margin-left: 5px; margin-top: 5px">
+              <img src="assets/library_icon.png" alt="lib" height="30px" />
+              Your Library
+            </span>
+            <span class="sbt-plus">&plus;</span>
+          </div>
+          <!-- -----------  -->
+          <div class="side-mid-card1">
+            <h3>Create Your First Playlist</h3>
+            <h5>It's easy we'll help you</h5>
+            <br />
+            <button id="expbtn" class="show-playlist">Create Playlist</button>
+          </div>
+          <div class="side-mid-card2">
+            <h3>Let's find some podcast to follow</h3>
+            <h5>We'll keep you updated on new episode</h5>
+            <br />
+            <button id="expbtn" class="open-podcast">Browse podcast</button>
+          </div>
+          <!-- -------playlist items-----  -->
+          <div class="playlist-content hide-content">
+            <div class="close-content">
+              <img src="assets/backward_icon.png" alt="" />
+            </div>
+            <h2 class="pc-head">Create Playlist</h2>
+            <br />
+            <div class="playlist-mid">
+              <h4>Artist in Your playlist</h4>
+              <div class="playlist-item playlist-container2">
+                <div class="msg">
+                  <samp class="msg-content"
+                    >Your Playlist is Empty Right Now</samp
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- -----------playlist container---------  -->
+            <div class="playlist-last">
+              <h3>Top Artists From India</h3>
+              <div class="playlist-container">
+                <div class="playlist-item">
+                  <div class="playlist-item-one">
+                    <img
+                      src="https://i.scdn.co/image/ab6761610000f178214f3cf1cbe7139c1e26ffbb"
+                      alt="" />
+                    <span>
+                      <h5>The Weeknd</h5>
+                      <p>Artist</p>
+                    </span>
+                  </div>
+                  <div class="playlist-item-minus minus-hidden">&minus;</div>
+                  <div class="playlist-item-two">&plus;</div>
+                </div>
+                <div class="playlist-item">
+                  <div class="playlist-item-one">
+                    <img
+                      src="https://i.scdn.co/image/ab6761610000f178c40600e02356cc86f0debe84"
+                      alt="" />
+                    <span>
+                      <h5>Atif Aslam</h5>
+                      <p>Artist</p>
+                    </span>
+                  </div>
+                  <div class="playlist-item-minus minus-hidden">&minus;</div>
+                  <div class="playlist-item-two">&plus;</div>
+                </div>
+                <div class="playlist-item">
+                  <div class="playlist-item-one">
+                    <img
+                      src="https://i.scdn.co/image/ab6761610000f178cb6926f44f620555ba444fca"
+                      alt="" />
+                    <span>
+                      <h5>Pritam</h5>
+                      <p>Artist</p>
+                    </span>
+                  </div>
+                  <div class="playlist-item-minus minus-hidden">&minus;</div>
+                  <div class="playlist-item-two">&plus;</div>
+                </div>
+                <div class="playlist-item">
+                  <div class="playlist-item-one">
+                    <img
+                      src="https://i.scdn.co/image/ab6761610000f1780261696c5df3be99da6ed3f3"
+                      alt="" />
+                    <span>
+                      <h5>Arijit Singh</h5>
+                      <p>Artist</p>
+                    </span>
+                  </div>
+                  <div class="playlist-item-minus minus-hidden">&minus;</div>
+                  <div class="playlist-item-two">&plus;</div>
+                </div>
+                <div class="playlist-item">
+                  <div class="playlist-item-one">
+                    <img
+                      src="https://i.scdn.co/image/ab6761610000f178c5911f22814f270d5004ae53"
+                      alt="" />
+                    <span>
+                      <h5>Armaan Malik</h5>
+                      <p>Artist</p>
+                    </span>
+                  </div>
+                  <div class="playlist-item-minus minus-hidden">&minus;</div>
+                  <div class="playlist-item-two">&plus;</div>
+                </div>
+                <div class="playlist-item">
+                  <div class="playlist-item-one">
+                    <img
+                      src="https://i.scdn.co/image/ab6761610000f178ac45eaf028dc58810df0f382"
+                      alt="" />
+                    <span>
+                      <h5 style="text-wrap: nowrap">Rahat Fateh Ali Khan</h5>
+                      <p>Artist</p>
+                    </span>
+                  </div>
+                  <div class="playlist-item-minus minus-hidden">&minus;</div>
+                  <div class="playlist-item-two">&plus;</div>
+                </div>
+                <div class="playlist-item">
+                  <div class="playlist-item-one">
+                    <img
+                      src="https://i.scdn.co/image/ab67616100005174be82028416d62fe0689a576e"
+                      alt="" />
+                    <span>
+                      <h5 style="text-wrap: nowrap">Dino James</h5>
+                      <p>Artist</p>
+                    </span>
+                  </div>
+                  <div class="playlist-item-minus minus-hidden">&minus;</div>
+                  <div class="playlist-item-two">&plus;</div>
+                </div>
+              </div>
+
+              <div class="footer"></div>
+            </div>
+            <!-- --------end---------  -->
+          </div>
+          <div class="podcast-container hide-podcast">
+            <div class="podcast-top">
+              <h3 style="margin-right: 15px">Most Popular</h3>
+              <img
+                class="close-podcast"
+                src="assets/backward_icon.png"
+                alt=""
+                style="transform: rotate(180deg)" />
+            </div>
+            <!-- --------podcast -cards --------  -->
+            <h4 class="podcast-topic">Devotional</h4>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/ab67656300005f1f36dbb0b2d65004488fcc322f"
+                alt="" />
+              <span>
+                <h5>The Stories Of Mahabharat</h5>
+                <p>Artist</p>
+              </span>
+            </div>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/8ca72a3851b386c2e75dcb722bcbc2728173a035"
+                alt="" />
+              <span>
+                <h5>Chanakya Neeti</h5>
+                <p>Artist</p>
+              </span>
+            </div>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/ab67656300005f1f9114d741247e2d26a7b48b6f"
+                alt="" />
+              <span>
+                <h5>Krishna Leela</h5>
+                <p>Artist</p>
+              </span>
+            </div>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/ab67656300005f1fc67b66d76fae2039cb7182dc"
+                alt="" />
+              <span>
+                <h5>The Sadhguru Podcast</h5>
+                <p>Artist</p>
+              </span>
+            </div>
+            <h4 class="podcast-topic">Horror</h4>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/ab67656300005f1f785da634c58b8ee62eb4051b"
+                alt="" />
+              <span>
+                <h5>Based Horror</h5>
+                <p>Artist</p>
+              </span>
+            </div>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/ab67656300005f1f04f358b3609163f444e02d2f"
+                alt="" />
+              <span>
+                <h5>Horror Time</h5>
+                <p>Artist</p>
+              </span>
+            </div>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/e8aff185ac6f9427c599b638a6a3156b99d65b89"
+                alt="" />
+              <span>
+                <h5>Ek Kahani Aisi</h5>
+                <p>Artist</p>
+              </span>
+            </div>
+            <h4 class="podcast-topic">Motivational</h4>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/ab67656300005f1f5e3baa68c0bed0ae4c98f7ac"
+                alt="" />
+              <span>
+                <h5>The Positivity</h5>
+                <p>Henry G</p>
+              </span>
+            </div>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/6ecff01405ca059a5c6d07fac29844a57a59b86c"
+                alt="" />
+              <span>
+                <h5>Motivational Podcast</h5>
+                <p>Motivational Guru</p>
+              </span>
+            </div>
+            <div
+              class="playlist-item-one"
+              style="margin-left: 20px; margin-top: 10px">
+              <img
+                src="https://i.scdn.co/image/ab67656300005f1fb3f4ad5caf3ac9b629b3e9a4"
+                alt="" />
+              <span>
+                <h5>True Motivational</h5>
+                <p>Motivational Guy</p>
+              </span>
+            </div>
+
+            <br /><br /><br />
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="main-content" id="main">
+        <div class="mc-top" style="margin-bottom: 5px">
+          <div class="mc_left">
+            <img src="assets/backward_icon.png " alt="" class="altbtn" />
+            <img src="assets/forward_icon.png " alt="" class="sidebar-show" />
+          </div>
+          <div class="mc_right">
+            <span>
+              <button class="openPremium" id="expbtn">
+                <a href="premium.html" style="text-decoration: none"
+                  >Explore Premium</a
+                >
+              </button>
+              <button class="altbtn">&darr; Install App</button>
+            </span>
+            <span class="iconss"><i class="fa-solid fa-user"></i></span>
+          </div>
+        </div>
+        <h2>Recent Played</h2>
+        <div class="card" style="margin-left: 25px">
+          <div class="overlay">
+            <audio
+              src="./music/Pehle Bhi Main [128 Kbps]-(Pagalworld.gay).mp3"
+              class="myAudio"></audio>
+            <img src="assets/logo.png" alt="" width="50px" />
+          </div>
+          <div class="card_img">
+            <img
+              src="https://i.scdn.co/image/ab67616d00001e025f3ede47954a93aa03efe5f9"
+              alt="" />
+          </div>
+          <div class="card_desc">
+            <f4>Pehle Bhi Mai</f4>
+            <h5 style="color: gray">Vishal Mishra</h5>
+          </div>
+        </div>
+
+        <div class="remains">
+          <h2>Spotify original & exclusive podcasts</h2>
+
+          <span>Show All</span>
+        </div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Mahiye Jinna Sohna.mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img src="assets/card2img.jpeg" alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Mahiye Jinna Sohna</f4>
+                <h5 style="color: gray">Darshan Raval</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Mere-Paas-Tum-Ho.mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img src="assets/card3img.jpeg" alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Mere Pass tum ho</f4>
+                <h5 style="color: gray">Fateh Ali Khan</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio src="./music/Chaleya.mp3" class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e0260dbbb589dff0c57a3a4ffb2"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Chaleya (From "Jawan")</f4>
+                <h5 style="color: gray">KK.</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio src="./music/One-Love.mp3" class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e02d7eb20034ff1c7b7bb3629de"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>One Love : by shubh</f4>
+                <h5 style="color: gray">Subh</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Mi Amor(PagalWorld).mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e02050aa2ba1ea0f6b96f4de231"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Mi Amor</f4>
+                <h5 style="color: gray">Manjar Arora</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="remains">
+          <h2>Spotify original & Global Rap hits</h2>
+
+          <span>Show All</span>
+        </div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Haryana Hood(PagalWorld.com.pe).mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e02258eb711a21ed6a63e0bfb2d"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Haryana Hood</f4>
+                <h5 style="color: gray">Irshad Khan</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Laado Mc Square 128 Kbps.mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e0212f3d76fa93aabe68a8659f5"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Laado</f4>
+                <h5 style="color: gray">MC SQUARE</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Kaleshi Chori(PagalWorld.com.pe).mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e0205030a98c90877fc62e141fe"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>KALESHI CHORI</f4>
+                <h5 style="color: gray">DG IMMORTALS</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Lost(PagalWorld.com.pe).mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e02bf1744a2fefe51f199ff3874"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>LOST</f4>
+                <h5 style="color: gray">DINO JAMES</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Desi-Kalakaar(PaglaSongs).mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e0265ce8c712e4fb894bc88461b"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Desi Kalakar</f4>
+                <h5 style="color: gray">Yo Yo Honey</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="remains">
+          <h2>TollyWood Pearl</h2>
+
+          <span>Show All</span>
+        </div>
+        <div class="grid-container">
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Psycho-Saiyaan---Saaho(PagalWorldl).mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e02092df3f6a1d141197fb71117"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Phycho Saiyaan</f4>
+                <h5 style="color: gray">Anirudh Ravichandar</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Ramulo-Ramula-Hindi(PagalWorldl).mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e0290618753bda4d5caf67b5cf4"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Ramuloo Ramulaa</f4>
+                <h5 style="color: gray">Anurag Kulkarni</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Nacho-Nacho(PagalWorldl).mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e024c30b2c8eaa6ed1b01c518a6"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Nacho Nacho</f4>
+                <h5 style="color: gray">RS & VM</h5>
+              </div>
+            </div>
+          </div>
+          <div class="grid-item">
+            <div class="card">
+              <div class="overlay">
+                <audio
+                  src="./music/Butta Bomma Tajmeel Sherif 320 Kbps.mp3"
+                  class="myAudio"></audio>
+                <img src="assets/logo.png" alt="" width="50px" />
+              </div>
+              <div class="card_img">
+                <img
+                  src="https://i.scdn.co/image/ab67616d00001e0290618753bda4d5caf67b5cf4"
+                  alt="" />
+              </div>
+              <div class="card_desc">
+                <f4>Buttabomma</f4>
+                <h5 style="color: gray">Arman Malik</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="line">This website is owned by @Sanjay kumar shukla</div>
+        </div>
+      </div>
+      <div class="music-player">
+        <div class="mp_left">
+          <img
+            src="assets/card3img.jpeg"
+            alt=""
+            height="50px"
+            class="play_img" />
+          <span>
+            <h5 class="play-title">Mere pass tum ho</h5>
+            <p class="play-artist">by Nurrain Shah</p>
+          </span>
+          <span class="bottom-icon">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa-solid fa-display"></i>
+          </span>
+        </div>
+        <div class="mp_mid">
+          <div class="players-control">
+            <i class="fa-solid fa-repeat h-bar"></i>
+            <i class="fa-solid fa-backward h-bar"></i>
+            <i class="fa-solid fa-play" id="playMusic"></i>
+            <i class="fa-solid fa-pause pauseHidden" id="pauseMusic"></i>
+            <i class="fa-solid fa-forward"></i>
+            <i class="fa-solid fa-microphone-lines-slash h-bar"></i>
+          </div>
+          <div class="playback-bar">
+            <span class="cur-time">0:00</span>
+            <input
+              type="range"
+              id="range"
+              class="progress-bar"
+              min="0"
+              max="100"
+              value="10"
+              step="5" />
+            <span class="tot-time">3:33</span>
+          </div>
+        </div>
+        <div class="mp_right">
+          <div class="mp_right_content">
+            <i class="fa-solid fa-play one"></i>
+            <i class="fa fa-heart two" aria-hidden="true"></i>
+            <i class="fa-solid fa-microphone three"></i>
+            <i class="fa-solid fa-bars four"></i>
+            <i class="fa-solid fa-volume-low five"></i>
+            <div
+              class="widdy"
+              style="
+                height: 3px;
+                width: 60px;
+                background-color: gray;
+                border-radius: 22px;
+              "></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+      integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
